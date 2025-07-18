@@ -46,7 +46,7 @@ html {
 /* Navigation Styles */
 .navbar {
     position: fixed;
-    top: 20px; /* Gap from top - this will be fixed */
+    top: 0; /* Fixed: moved completely to the top */
     left: 0;
     right: 0;
     background: rgba(26, 26, 26, 0.9);
@@ -124,16 +124,25 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 25px; /* Small icons - will be made larger */
-    height: 25px;
+    width: 35px; /* Made larger */
+    height: 35px;
     background: var(--card-bg);
-    color: #888888; /* Gray color - will be changed to white */
+    color: #ffffff; /* Changed to white */
     border-radius: 50%;
     text-decoration: none;
-    font-size: 0.8rem; /* Small size - will be increased */
+    font-size: 1rem; /* Increased size */
     transition: all 0.3s ease;
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.github-icon {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.email-icon {
+    font-size: 1rem;
 }
 
 .nav-social-link:hover {
@@ -178,7 +187,7 @@ html {
 
 .hero-content {
     animation: fadeInUp 1s ease-out;
-    padding-left: 0; /* Will be moved to the right */
+    padding-left: 2rem; /* Moved to the right as requested */
 }
 
 .hero-title {
