@@ -3,17 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thorge Mrowinski - Developer</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Thorge Mrowinski - Professional Developer Portfolio. AI-powered solutions, modern web development, and innovative technology integration.">
+    <meta name="keywords" content="developer, web development, AI, programming, portfolio, thorge mrowinski">
+    <meta name="author" content="Thorge Mrowinski">
+    <meta property="og:title" content="Thorge Mrowinski - Developer Portfolio">
+    <meta property="og:description" content="Professional developer creating innovative solutions with modern technologies and AI integration.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="images/profile-placeholder.jpg">
+    <title>Thorge Mrowinski - Professional Developer Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
 <body>
+    <!-- Loading Animation -->
+    <div class="loading-overlay" id="loading-overlay">
+        <div class="loading-spinner">
+            <div class="spinner"></div>
+            <p>Initializing...</p>
+        </div>
+    </div>
+
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <div class="nav-brand">
-                <h1>Developer</h1>
+                <h1>TM</h1>
             </div>
             <div class="nav-menu" id="nav-menu">
                 <div class="nav-item">
@@ -23,22 +40,18 @@
                     <a href="#about" class="nav-link">Über mich</a>
                 </div>
                 <div class="nav-item">
-                    <a href="#projects" class="nav-link">Projekte</a>
-                </div>
-                <div class="nav-item">
                     <a href="#skills" class="nav-link">Skills</a>
                 </div>
                 <div class="nav-item">
-                    <a href="#philosophy" class="nav-link">Entwicklung</a>
+                    <a href="#projects" class="nav-link">Projekte</a>
                 </div>
-                <div class="nav-item nav-social">
-                    <a href="https://github.com/Mrowinski-Thorge" target="_blank" rel="noopener noreferrer" 
-                       aria-label="GitHub Profil" class="nav-social-link">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="mailto:Thorge.mrowinski@proton.me" aria-label="E-Mail schreiben" class="nav-social-link">
-                        <i class="fas fa-envelope"></i>
-                    </a>
+                <div class="nav-item">
+                    <a href="#contact" class="nav-link">Kontakt</a>
+                </div>
+                <div class="nav-item">
+                    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
                 </div>
             </div>
             <div class="nav-toggle" id="mobile-menu">
@@ -54,36 +67,491 @@
         <div class="hero-container">
             <div class="hero-content">
                 <h1 class="hero-title">
-                    <span class="gradient-text">Thorge Mrowinski</span>
+                    Hallo, ich bin <span class="gradient-text">Thorge Mrowinski</span>
                 </h1>
                 <h2 class="hero-subtitle">
                     <span class="ai-powered">AI Powered</span> Developer & Problem Solver
                 </h2>
                 <p class="hero-description">
-                    Entwickle innovative Lösungen mit modernsten Technologien und KI-Integration
+                    Ich entwickle innovative Lösungen mit modernsten Technologien und KI-Integration. 
+                    Spezialisiert auf Frontend- und Backend-Entwicklung mit Fokus auf Performance und Benutzerfreundlichkeit.
                 </p>
                 <div class="hero-buttons">
-                    <a href="#current-project" class="btn btn-primary glow-on-hover">Projekte ansehen</a>
+                    <a href="#projects" class="btn btn-primary glow-on-hover">Projekte ansehen</a>
+                    <a href="#contact" class="btn btn-secondary">Kontakt aufnehmen</a>
+                </div>
+                <div class="hero-social">
+                    <a href="https://github.com/Mrowinski-Thorge" target="_blank" rel="noopener noreferrer" 
+                       aria-label="GitHub Profil" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:Thorge.mrowinski@proton.me" aria-label="E-Mail schreiben" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/thorge-mrowinski" target="_blank" rel="noopener noreferrer" 
+                       aria-label="LinkedIn Profil" class="social-link">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
                 </div>
             </div>
             <div class="hero-image">
                 <div class="hero-img-wrapper">
-                    <div class="speech-bubble">
-                        <img src="robot.png" alt="AI Developer Assistant" class="character-img">
-                        <div class="bubble-text">Lass uns coden!</div>
+                    <div class="floating-elements">
+                        <div class="floating-element">💻</div>
+                        <div class="floating-element">🚀</div>
+                        <div class="floating-element">⚡</div>
+                    </div>
+                    <div class="profile-card">
+                        <img src="Character.png" alt="Thorge Mrowinski - Developer" class="profile-img">
+                        <div class="profile-status">
+                            <span class="status-dot"></span>
+                            Verfügbar für Projekte
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Rest of the content sections would go here -->
+    <!-- About Section -->
     <section class="about" id="about">
         <div class="container">
-            <h2>Über mich</h2>
-            <p>Entwickler mit Passion für innovative Technologien...</p>
+            <div class="section-header">
+                <h2 class="section-title">Über mich</h2>
+                <p class="section-subtitle">Leidenschaft für Code und Innovation</p>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="image-wrapper">
+                        <img src="images/profile-placeholder.jpg" alt="Thorge Mrowinski" class="about-img">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                <i class="fas fa-code"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h3>Hallo! Ich bin Thorge, ein leidenschaftlicher Entwickler</h3>
+                    <p>
+                        Mit mehreren Jahren Erfahrung in der Softwareentwicklung bringe ich kreative Ideen zum Leben. 
+                        Meine Expertise umfasst moderne Frontend-Technologien wie React, Vue.js und Angular sowie 
+                        Backend-Entwicklung mit Node.js, Python und Java.
+                    </p>
+                    <p>
+                        Ich glaube an sauberen, wartbaren Code und benutzerfreundliche Interfaces. 
+                        Kontinuierliches Lernen und die Integration neuer Technologien wie KI und Machine Learning 
+                        treiben mich täglich an.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight">
+                            <div class="highlight-number">50+</div>
+                            <div class="highlight-text">Projekte abgeschlossen</div>
+                        </div>
+                        <div class="highlight">
+                            <div class="highlight-number">3+</div>
+                            <div class="highlight-text">Jahre Erfahrung</div>
+                        </div>
+                        <div class="highlight">
+                            <div class="highlight-number">24/7</div>
+                            <div class="highlight-text">Code Enthusiast</div>
+                        </div>
+                    </div>
+                    <a href="#contact" class="btn btn-outline">Lass uns zusammenarbeiten</a>
+                </div>
+            </div>
         </div>
     </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Meine Fähigkeiten</h2>
+                <p class="section-subtitle">Technologien und Tools, die ich beherrsche</p>
+            </div>
+            <div class="skills-content">
+                <div class="skills-category">
+                    <h3>Frontend</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-html5"></i>
+                            </div>
+                            <span>HTML5</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-css3-alt"></i>
+                            </div>
+                            <span>CSS3</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-js-square"></i>
+                            </div>
+                            <span>JavaScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-react"></i>
+                            </div>
+                            <span>React</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-vuejs"></i>
+                            </div>
+                            <span>Vue.js</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="75"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-category">
+                    <h3>Backend</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-node-js"></i>
+                            </div>
+                            <span>Node.js</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-python"></i>
+                            </div>
+                            <span>Python</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <span>MongoDB</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <span>Express.js</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-category">
+                    <h3>Tools & Sonstiges</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-git-alt"></i>
+                            </div>
+                            <span>Git</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-docker"></i>
+                            </div>
+                            <span>Docker</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="70"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <span>AI/ML</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="65"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-figma"></i>
+                            </div>
+                            <span>Figma</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="75"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Meine Projekte</h2>
+                <p class="section-subtitle">Eine Auswahl meiner besten Arbeiten</p>
+            </div>
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">Alle</button>
+                <button class="filter-btn" data-filter="web">Web Apps</button>
+                <button class="filter-btn" data-filter="mobile">Mobile</button>
+                <button class="filter-btn" data-filter="ai">AI/ML</button>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <img src="images/project1-placeholder.jpg" alt="E-Commerce Platform">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>E-Commerce Platform</h3>
+                        <p>Moderne E-Commerce-Lösung mit React, Node.js und Stripe-Integration für seamlose Zahlungsabwicklung.</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                            <span>Stripe</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="ai">
+                    <div class="project-image">
+                        <img src="images/project2-placeholder.jpg" alt="AI Chat Assistant">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>AI Chat Assistant</h3>
+                        <p>Intelligenter Chatbot mit Natural Language Processing und maschinellem Lernen für Kundenservice.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>TensorFlow</span>
+                            <span>Flask</span>
+                            <span>NLP</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="mobile">
+                    <div class="project-image">
+                        <img src="images/project3-placeholder.jpg" alt="Task Management App">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Task Management App</h3>
+                        <p>Responsive Progressive Web App für Projektmanagement mit Real-time Collaboration Features.</p>
+                        <div class="project-tech">
+                            <span>Vue.js</span>
+                            <span>PWA</span>
+                            <span>Socket.io</span>
+                            <span>Firebase</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <img src="images/project4-placeholder.jpg" alt="Portfolio Website">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Portfolio Website</h3>
+                        <p>Moderne, responsive Portfolio-Website mit Dark/Light Mode und smooth Animationen.</p>
+                        <div class="project-tech">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                            <span>GSAP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Kontakt</h2>
+                <p class="section-subtitle">Lass uns über dein nächstes Projekt sprechen</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Kontaktiere mich</h3>
+                    <p>Bereit für neue Herausforderungen und spannende Projekte. Schreib mir und lass uns gemeinsam etwas Großartiges schaffen!</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <span>E-Mail</span>
+                                <a href="mailto:Thorge.mrowinski@proton.me">Thorge.mrowinski@proton.me</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <div class="contact-text">
+                                <span>GitHub</span>
+                                <a href="https://github.com/Mrowinski-Thorge" target="_blank" rel="noopener noreferrer">Mrowinski-Thorge</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fab fa-linkedin"></i>
+                            </div>
+                            <div class="contact-text">
+                                <span>LinkedIn</span>
+                                <a href="https://linkedin.com/in/thorge-mrowinski" target="_blank" rel="noopener noreferrer">Thorge Mrowinski</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" name="name" required>
+                            <span class="error-message" id="name-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-Mail *</label>
+                            <input type="email" id="email" name="email" required>
+                            <span class="error-message" id="email-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Betreff</label>
+                            <input type="text" id="subject" name="subject">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Nachricht *</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <span class="error-message" id="message-error"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <span class="btn-text">Nachricht senden</span>
+                            <span class="btn-loading">
+                                <i class="fas fa-spinner fa-spin"></i>
+                            </span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Thorge Mrowinski</h3>
+                    <p>AI Powered Developer & Problem Solver</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">Über mich</a></li>
+                            <li><a href="#skills">Skills</a></li>
+                            <li><a href="#projects">Projekte</a></li>
+                            <li><a href="#contact">Kontakt</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Social Media</h4>
+                        <div class="footer-social">
+                            <a href="https://github.com/Mrowinski-Thorge" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="mailto:Thorge.mrowinski@proton.me" aria-label="E-Mail">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                            <a href="https://linkedin.com/in/thorge-mrowinski" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2024 Thorge Mrowinski. Alle Rechte vorbehalten.</p>
+                    <div class="footer-theme-toggle">
+                        <span>Theme: </span>
+                        <button class="theme-toggle-small" id="footer-theme-toggle">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scroll-to-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <script src="js/script.js"></script>
 </body>
