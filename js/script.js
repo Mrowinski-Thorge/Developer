@@ -22,15 +22,28 @@ class PortfolioApp {
 
     // Hide loading screen
     hideLoading() {
-        setTimeout(() => {
-            const loadingOverlay = document.getElementById('loading-overlay');
-            if (loadingOverlay) {
+        const loadingOverlay = document.getElementById('loading-overlay');
+        if (loadingOverlay) {
+            // Immediate fallback in case of any errors
+            const hideLoadingScreen = () => {
                 loadingOverlay.classList.add('hidden');
                 setTimeout(() => {
                     loadingOverlay.style.display = 'none';
                 }, 500);
+            };
+
+            // Hide after 2.5 seconds with error handling
+            setTimeout(hideLoadingScreen, 2500);
+            
+            // Also ensure it hides on page load complete
+            if (document.readyState === 'complete') {
+                setTimeout(hideLoadingScreen, 1000);
+            } else {
+                window.addEventListener('load', () => {
+                    setTimeout(hideLoadingScreen, 1000);
+                });
             }
-        }, 1500); // Show loading for 1.5 seconds
+        }
     }
 
     // Theme Management
@@ -628,6 +641,8 @@ document.addEventListener('visibilitychange', () => {
 });
 
 // Service Worker registration for PWA functionality (optional)
+// Disabled to prevent 404 errors - can be enabled when sw.js is created
+/*
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
         navigator.serviceWorker.register('/sw.js')
@@ -639,3 +654,4 @@ if ('serviceWorker' in navigator) {
             });
     });
 }
+*/
