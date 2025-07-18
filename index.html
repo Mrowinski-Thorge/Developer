@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thorge Mrowinski - Full-Stack Developer</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Thorge Mrowinski - Full-Stack Developer & Software Engineer. Spezialisiert auf moderne Webtechnologien wie React, Node.js, Python und mehr.">
+    <meta name="keywords" content="Full-Stack Developer, Software Engineer, React, Node.js, Python, JavaScript, HTML, CSS, Git, Docker">
+    <meta name="author" content="Thorge Mrowinski">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Thorge Mrowinski - Full-Stack Developer">
+    <meta property="og:description" content="Full-Stack Developer & Software Engineer spezialisiert auf moderne Webtechnologien">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mrowinski-thorge.github.io/Developer/">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Thorge Mrowinski - Full-Stack Developer">
+    <meta name="twitter:description" content="Full-Stack Developer & Software Engineer spezialisiert auf moderne Webtechnologien">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E💻%3C/text%3E%3C/svg%3E">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home">Thorge.dev</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <div class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </div>
+                <div class="nav-item">
+                    <a href="#about" class="nav-link">Über mich</a>
+                </div>
+                <div class="nav-item">
+                    <a href="#skills" class="nav-link">Skills</a>
+                </div>
+                <div class="nav-item">
+                    <a href="#portfolio" class="nav-link">Portfolio</a>
+                </div>
+                <div class="nav-item">
+                    <a href="#contact" class="nav-link">Kontakt</a>
+                </div>
+            </div>
+            <div class="nav-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Hi, ich bin <span class="accent">Thorge Mrowinski</span>
+                </h1>
+                <h2 class="hero-subtitle">
+                    <span id="typing-text"></span><span class="cursor">|</span>
+                </h2>
+                <p class="hero-description">
+                    Leidenschaftlicher Full-Stack Developer mit Fokus auf moderne Webtechnologien 
+                    und innovative Softwarelösungen. Ich verwandle Ideen in funktionale, 
+                    benutzerfreundliche Anwendungen.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#portfolio" class="btn btn-primary">Meine Projekte</a>
+                    <a href="#contact" class="btn btn-secondary">Kontakt aufnehmen</a>
+                </div>
+                <div class="hero-social">
+                    <a href="https://github.com/Mrowinski-Thorge" target="_blank" rel="noopener noreferrer" 
+                       aria-label="GitHub Profil">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/thorge-mrowinski" target="_blank" rel="noopener noreferrer" 
+                       aria-label="LinkedIn Profil">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:thorge@example.com" aria-label="E-Mail schreiben">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-img-wrapper">
+                    <div class="hero-img-placeholder">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <a href="#about" aria-label="Scroll nach unten">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Über mich</h2>
+                <p class="section-subtitle">Mein Weg als Entwickler</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="about-item">
+                        <h3>Meine Leidenschaft</h3>
+                        <p>
+                            Als Full-Stack Developer liebe ich es, komplexe Probleme in elegante, 
+                            benutzerfreundliche Lösungen zu verwandeln. Meine Reise in der 
+                            Softwareentwicklung begann mit der Faszination für Code und der 
+                            Möglichkeit, digitale Erlebnisse zu schaffen.
+                        </p>
+                    </div>
+                    <div class="about-item">
+                        <h3>Mein Ansatz</h3>
+                        <p>
+                            Ich glaube an sauberen, effizienten Code und moderne Entwicklungspraktiken. 
+                            Von der Frontend-Gestaltung bis zur Backend-Architektur fokussiere ich mich 
+                            auf Performance, Skalierbarkeit und Benutzerfreundlichkeit.
+                        </p>
+                    </div>
+                    <div class="about-item">
+                        <h3>Kontinuierliches Lernen</h3>
+                        <p>
+                            Die Technologielandschaft entwickelt sich ständig weiter, und ich liebe es, 
+                            neue Technologien zu erforschen und meine Fähigkeiten zu erweitern. 
+                            Aktuell vertiefe ich mich in Cloud-Technologien und DevOps-Praktiken.
+                        </p>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">2+</span>
+                        <span class="stat-label">Jahre Erfahrung</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">15+</span>
+                        <span class="stat-label">Projekte</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">8+</span>
+                        <span class="stat-label">Technologien</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Skills & Technologien</h2>
+                <p class="section-subtitle">Mein technisches Arsenal</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Frontend</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML5</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-css3-alt"></i>
+                            <span>CSS3</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-js-square"></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-react"></i>
+                            <span>React</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Backend</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fab fa-node-js"></i>
+                            <span>Node.js</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i>
+                            <span>Databases</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-server"></i>
+                            <span>APIs</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools & DevOps</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fab fa-git-alt"></i>
+                            <span>Git</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-docker"></i>
+                            <span>Docker</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-cloud"></i>
+                            <span>Cloud</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-terminal"></i>
+                            <span>CLI</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Portfolio</h2>
+                <p class="section-subtitle">Ausgewählte Projekte</p>
+            </div>
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">Alle</button>
+                <button class="filter-btn" data-filter="web">Web Apps</button>
+                <button class="filter-btn" data-filter="mobile">Mobile</button>
+                <button class="filter-btn" data-filter="backend">Backend</button>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-category="web">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-links">
+                                <a href="#" class="portfolio-link" aria-label="Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="portfolio-link" aria-label="GitHub Repository">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>E-Commerce Platform</h3>
+                        <p>Vollständige E-Commerce-Lösung mit React Frontend und Node.js Backend</p>
+                        <div class="portfolio-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="web">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-links">
+                                <a href="#" class="portfolio-link" aria-label="Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="portfolio-link" aria-label="GitHub Repository">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Analytics Dashboard</h3>
+                        <p>Interaktives Dashboard für Datenvisualisierung und Reporting</p>
+                        <div class="portfolio-tech">
+                            <span>React</span>
+                            <span>D3.js</span>
+                            <span>Python</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="mobile">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-links">
+                                <a href="#" class="portfolio-link" aria-label="Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="portfolio-link" aria-label="GitHub Repository">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Task Manager App</h3>
+                        <p>Cross-platform mobile App für Projektmanagement und Zusammenarbeit</p>
+                        <div class="portfolio-tech">
+                            <span>React Native</span>
+                            <span>Firebase</span>
+                            <span>Redux</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="backend">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-links">
+                                <a href="#" class="portfolio-link" aria-label="Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="portfolio-link" aria-label="GitHub Repository">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>REST API Service</h3>
+                        <p>Skalierbare REST API mit Authentifizierung und Datenverarbeitung</p>
+                        <div class="portfolio-tech">
+                            <span>Node.js</span>
+                            <span>Express</span>
+                            <span>PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Kontakt</h2>
+                <p class="section-subtitle">Lassen Sie uns zusammenarbeiten</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Haben Sie ein Projekt im Kopf?</h3>
+                    <p>
+                        Ich bin immer interessiert an neuen Projekten und Zusammenarbeiten. 
+                        Ob Sie eine Idee für eine Web-App haben, Unterstützung bei einem 
+                        bestehenden Projekt benötigen oder einfach nur hallo sagen möchten - 
+                        ich freue mich auf Ihre Nachricht!
+                    </p>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <a href="mailto:thorge@example.com">thorge@example.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fab fa-linkedin"></i>
+                            <div>
+                                <h4>LinkedIn</h4>
+                                <a href="https://linkedin.com/in/thorge-mrowinski" target="_blank" rel="noopener noreferrer">
+                                    linkedin.com/in/thorge-mrowinski
+                                </a>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fab fa-github"></i>
+                            <div>
+                                <h4>GitHub</h4>
+                                <a href="https://github.com/Mrowinski-Thorge" target="_blank" rel="noopener noreferrer">
+                                    github.com/Mrowinski-Thorge
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contact-form" novalidate>
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" name="name" required>
+                            <span class="error-message" id="name-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-Mail *</label>
+                            <input type="email" id="email" name="email" required>
+                            <span class="error-message" id="email-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Betreff</label>
+                            <input type="text" id="subject" name="subject">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Nachricht *</label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                            <span class="error-message" id="message-error"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <span class="btn-text">Nachricht senden</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2024 Thorge Mrowinski. Alle Rechte vorbehalten.</p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://github.com/Mrowinski-Thorge" target="_blank" rel="noopener noreferrer" 
+                       aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/thorge-mrowinski" target="_blank" rel="noopener noreferrer" 
+                       aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:thorge@example.com" aria-label="E-Mail">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
