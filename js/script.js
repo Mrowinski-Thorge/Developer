@@ -4,9 +4,12 @@ document.addEventListener('DOMContentLoaded', function() {
     initNavigation();
     initTypingAnimation();
     initScrollAnimations();
-    initPortfolioFilter();
     initContactForm();
     initScrollEffects();
+    initFloatingParticles();
+    initTimelineAnimations();
+    initAIToolsAnimations();
+    initFloatingCodeFragments();
 });
 
 // Navigation functionality
@@ -84,11 +87,11 @@ function initNavigation() {
 function initTypingAnimation() {
     const typingElement = document.getElementById('typing-text');
     const texts = [
-        'Full-Stack Developer',
-        'Software Engineer',
-        'React Spezialist',
-        'Node.js Entwickler',
-        'Python Programmer'
+        'AI-Powered Developer',
+        'Creative Asset Creator',
+        'GPT-Tool Builder',
+        'Innovation Catalyst',
+        'Future-Focused Maker'
     ];
     
     let textIndex = 0;
@@ -136,89 +139,42 @@ function initScrollAnimations() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
+                
+                // Special handling for timeline items
+                if (entry.target.classList.contains('timeline-item')) {
+                    setTimeout(() => {
+                        entry.target.classList.add('animate-in');
+                    }, 200);
+                }
+                
+                // Special handling for AI tools
+                if (entry.target.classList.contains('ai-tool')) {
+                    const delay = Array.from(entry.target.parentElement.children).indexOf(entry.target) * 200;
+                    setTimeout(() => {
+                        entry.target.classList.add('bounce-in');
+                    }, delay);
+                }
             }
         });
     }, observerOptions);
 
     // Add fade-in class to elements that should animate
     const animateElements = document.querySelectorAll(
-        '.about-item, .skill-category, .portfolio-item, .contact-info, .contact-form-wrapper, .stat-item'
+        '.section-fade-in, .slide-in-left, .slide-in-right, .slide-in-up, .bounce-on-scroll, .timeline-item, .ai-tool'
     );
 
     animateElements.forEach(element => {
         element.classList.add('fade-in');
         observer.observe(element);
     });
-
-    // Counter animation for stats
-    const statsNumbers = document.querySelectorAll('.stat-number');
-    const statsObserver = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                animateCounter(entry.target);
-                statsObserver.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.5 });
-
-    statsNumbers.forEach(stat => {
-        statsObserver.observe(stat);
-    });
 }
 
-// Counter animation function
-function animateCounter(element) {
-    const target = parseInt(element.textContent);
-    const increment = target / 30; // Animation duration
-    let current = 0;
-
-    const timer = setInterval(() => {
-        current += increment;
-        if (current >= target) {
-            element.textContent = target + '+';
-            clearInterval(timer);
-        } else {
-            element.textContent = Math.floor(current) + '+';
-        }
-    }, 50);
-}
-
-// Portfolio filter functionality
-function initPortfolioFilter() {
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    const portfolioItems = document.querySelectorAll('.portfolio-item');
-
-    filterBtns.forEach(btn => {
-        btn.addEventListener('click', function() {
-            // Remove active class from all buttons
-            filterBtns.forEach(button => button.classList.remove('active'));
-            // Add active class to clicked button
-            this.classList.add('active');
-
-            const filter = this.getAttribute('data-filter');
-
-            portfolioItems.forEach(item => {
-                if (filter === 'all' || item.getAttribute('data-category') === filter) {
-                    item.style.display = 'block';
-                    setTimeout(() => {
-                        item.style.opacity = '1';
-                        item.style.transform = 'scale(1)';
-                    }, 100);
-                } else {
-                    item.style.opacity = '0';
-                    item.style.transform = 'scale(0.8)';
-                    setTimeout(() => {
-                        item.style.display = 'none';
-                    }, 300);
-                }
-            });
-        });
-    });
-}
 
 // Contact form validation and handling
 function initContactForm() {
     const form = document.getElementById('contact-form');
+    if (!form) return; // Exit if form doesn't exist
+    
     const nameInput = document.getElementById('name');
     const emailInput = document.getElementById('email');
     const messageInput = document.getElementById('message');
@@ -552,3 +508,91 @@ document.addEventListener('error', function(e) {
 console.log('%cWillkommen auf meiner Website! 🚀', 'color: #00d4aa; font-size: 16px; font-weight: bold;');
 console.log('%cInteressiert am Code? Schau dir das Repository auf GitHub an!', 'color: #00d4aa; font-size: 12px;');
 console.log('https://github.com/Mrowinski-Thorge/Developer');
+
+// Floating particles animation
+function initFloatingParticles() {
+    const particlesContainer = document.querySelector('.floating-particles');
+    if (!particlesContainer) return;
+
+    const particleCount = 50;
+    
+    for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        particle.style.cssText = `
+            position: absolute;
+            width: ${Math.random() * 4 + 1}px;
+            height: ${Math.random() * 4 + 1}px;
+            background: rgba(0, 212, 170, ${Math.random() * 0.5 + 0.1});
+            border-radius: 50%;
+            animation: float ${Math.random() * 20 + 10}s infinite linear;
+            left: ${Math.random() * 100}%;
+            top: ${Math.random() * 100}%;
+        `;
+        particlesContainer.appendChild(particle);
+    }
+}
+
+// Timeline animations
+function initTimelineAnimations() {
+    const timelineLine = document.querySelector('.timeline-line');
+    if (!timelineLine) return;
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                timelineLine.style.height = '100%';
+                timelineLine.style.transition = 'height 2s ease-in-out';
+            }
+        });
+    }, { threshold: 0.1 });
+
+    observer.observe(document.querySelector('.timeline-content'));
+}
+
+// AI Tools animations
+function initAIToolsAnimations() {
+    const aiTools = document.querySelectorAll('.ai-tool');
+    
+    aiTools.forEach((tool, index) => {
+        tool.addEventListener('mouseenter', () => {
+            tool.style.transform = 'translateY(-10px) scale(1.05)';
+        });
+        
+        tool.addEventListener('mouseleave', () => {
+            tool.style.transform = 'translateY(0) scale(1)';
+        });
+    });
+}
+
+// Floating code fragments
+function initFloatingCodeFragments() {
+    const fragmentsContainer = document.querySelector('.floating-code-fragments');
+    if (!fragmentsContainer) return;
+
+    const codeSnippets = [
+        'console.log("AI");',
+        'import { GPT } from "openai";',
+        'const idea = createWith(AI);',
+        'function innovate() {}',
+        'npm install creativity',
+        'git commit -m "✨ magic"'
+    ];
+
+    codeSnippets.forEach((snippet, index) => {
+        const fragment = document.createElement('div');
+        fragment.className = 'code-fragment';
+        fragment.textContent = snippet;
+        fragment.style.cssText = `
+            position: absolute;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            color: rgba(0, 212, 170, 0.3);
+            animation: floatCode ${Math.random() * 15 + 10}s infinite ease-in-out;
+            left: ${Math.random() * 80 + 10}%;
+            top: ${Math.random() * 80 + 10}%;
+            pointer-events: none;
+        `;
+        fragmentsContainer.appendChild(fragment);
+    });
+}
